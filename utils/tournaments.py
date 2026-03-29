@@ -9,5 +9,5 @@ ALL_TOURNAMENTS = {
     'China Masters 2025': {'path': 'MLBB_China_Masters/2025', 'region': 'China', 'year': 2025, 'live': True, 'league': 'China Masters', 'split': '2025 Split 2'},
     'MTC S6': {'path': 'MTC_Turkiye_Championship/Season_6', 'region': 'Turkey', 'year': 2025, 'live': True, 'league': 'MTC (Turkey)', 'split': '2025 Split 1'},
     'MPL KH Season 9': {'path': 'MPL/Cambodia/Season_9', 'region': 'Cambodia', 'year': 2025, 'live': True, 'league': 'MPL Cambodia', 'split': '2025 Split 1'},
-    'MSL MM Season 2': {'path': 'MLBB_Super_League/Season_2', 'region': 'Myanmar', 'year': 2025, 'live': True, 'league': 'MSL Myanmar', 'split': '2025 Split 1'},
+    'MSL MM Season 3': {'path': 'MLBB_Super_League/Season_3', 'region': 'Myanmar', 'year': 2026, 'live': True, 'league': 'MSL Myanmar', 'split': '2026 Split 1'},
 }
