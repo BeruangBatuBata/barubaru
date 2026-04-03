@@ -2,7 +2,7 @@ ALL_TOURNAMENTS = {
     'MSC 2024': {'path': 'MSC/2024', 'region': 'International', 'year': 2024, 'live': False, 'league': 'MSC (Mid-Season Cup)', 'split': '2024 Split 2'},
     'MPL ID Season 17': {'path': 'MPL/Indonesia/Season_17', 'region': 'Indonesia', 'year': 2026, 'live': True, 'league': 'MPL Indonesia', 'split': '2026 Split 1'},
     'MPL PH Season 17': {'path': 'MPL/Philippines/Season_17', 'region': 'Philippines', 'year': 2026, 'live': True, 'league': 'MPL Philippines', 'split': '2026 Split 1'},
-    'MPL MY Season 16': {'path': 'MPL/Malaysia/Season_16', 'region': 'Malaysia', 'year': 2025, 'live': True, 'league': 'MPL Malaysia', 'split': '2025 Split 2'},
+    'MPL MY Season 17': {'path': 'MPL/Malaysia/Season_17', 'region': 'Malaysia', 'year': 2026, 'live': True, 'league': 'MPL Malaysia', 'split': '2026 Split 1'},
     'VMC 2025 Winter': {'path': 'Vietnam_MLBB_Championship/2025/Winter', 'region': 'Vietnam', 'year': 2025, 'live': True, 'league': 'VMC (Vietnam)', 'split': '2025 Split 1'},
     'MPL MENA S8': {'path': 'MPL/MENA/Season_8', 'region': 'MENA', 'year': 2025, 'live': True, 'league': 'MPL MENA', 'split': '2025 Split 2'},
     'MCC S6': {'path': 'MLBB_Continental_Championships/Season_6', 'region': 'EECA', 'year': 2025, 'live': True, 'league': 'MCC (EECA)', 'split': '2025 Split 2'},
