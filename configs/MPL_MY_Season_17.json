@@ -1,5 +1,5 @@
 {
-  "tournament_name": "MPL MY Season 16",
+  "tournament_name": "MPL MY Season 17",
   "format": "single_table",
   "groups": {},
   "brackets": [
@@ -15,7 +15,7 @@
     },
     {
       "start": 7,
-      "end": 10,
+      "end": 8,
       "name": "Eliminated"
     }
   ]
