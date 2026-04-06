@@ -1,5 +1,5 @@
 {
-  "tournament_name": "MPL KH Season 9",
+  "tournament_name": "MPL KH Season 10",
   "format": "single_table",
   "groups": {},
   "brackets": [
@@ -15,7 +15,7 @@
     },
     {
       "start": 7,
-      "end": 9,
+      "end": 10,
       "name": "Eliminated"
     }
   ]
