@@ -10,4 +10,5 @@ ALL_TOURNAMENTS = {
     'MTC S6': {'path': 'MTC_Turkiye_Championship/Season_6', 'region': 'Turkey', 'year': 2025, 'live': True, 'league': 'MTC (Turkey)', 'split': '2025 Split 1'},
     'MPL KH Season 10': {'path': 'MPL/Cambodia/Season_10', 'region': 'Cambodia', 'year': 2026, 'live': True, 'league': 'MPL Cambodia', 'split': '2026 Split 1'},
     'MSL MM Season 3': {'path': 'MLBB_Super_League/Myanmar/Season_3', 'region': 'Myanmar', 'year': 2026, 'live': True, 'league': 'MSL Myanmar', 'split': '2026 Split 1'},
+    'MLMS S1': {'path': 'ML_Masters_Series/Season_1', 'region': 'India', 'year': 2026, 'live': True, 'league': 'MLMS', 'split': '2026 Split 1'},
 }
