@@ -190,7 +190,7 @@ def build_week_blocks(dates_str):
     dates = sorted(list(set(dates)))
     blocks = [[dates[0]]]
     for prev, curr in zip(dates, dates[1:]):
-        if (curr - prev).days <= 2:
+        if (curr - prev).days <= 1:
             blocks[-1].append(curr)
         else:
             blocks.append([curr])
