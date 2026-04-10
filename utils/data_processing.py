@@ -40,7 +40,7 @@ def get_stage_info(pagename, section):
         stage_priority = 30
     elif "stage 2" in stage_type_lower:
         stage_priority = 20
-    elif "regular season" in stage_type_lower or "group" in stage_type_lower or "swiss" in stage_type_lower or "week" in stage_type_lower or "stage 1" in stage_type_lower:
+    elif "regular season" in stage_type_lower or "League Stage" in stage_type_lower or "group" in stage_type_lower or "swiss" in stage_type_lower or "week" in stage_type_lower or "stage 1" in stage_type_lower:
         stage_priority = 10
     
     # If stage_type is empty after all that, provide a fallback name
