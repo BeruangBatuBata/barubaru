@@ -292,6 +292,7 @@ def run_monte_carlo_simulation(teams, played_matches, current_wins, current_diff
             winner, loser = (a, b) if outcome.startswith("A") else (b, a)
             w, l = int(outcome[1]), int(outcome[2])
             sim_wins[winner] += 1; sim_diff[winner] += w - l; sim_diff[loser] += l - w
+            sA, sB = (w, l) if winner == a else (l, w)
             simulated_matches.append((a, b, winner, w, l))
         
         all_sim_matches = played_matches_simple + simulated_matches
