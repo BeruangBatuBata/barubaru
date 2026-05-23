@@ -276,7 +276,7 @@ def run_monte_carlo_simulation(teams, played_matches, current_wins, current_diff
         if len(opps) < 2 or m.get("winner") not in ("1", "2"): continue
         tA, tB = opps[0].get('name'), opps[1].get('name')
         winner = tA if m["winner"] == "1" else tB
-        sA, sB = 0,0 
+        sA, sB = 0, 0 
         for g in m.get("match2games", []):
             if str(g.get('winner')) == '1': sA += 1
             elif str(g.get('winner')) == '2': sB += 1
@@ -291,9 +291,12 @@ def run_monte_carlo_simulation(teams, played_matches, current_wins, current_diff
             if not outcome or outcome == "DRAW": continue
             winner, loser = (a, b) if outcome.startswith("A") else (b, a)
             w, l = int(outcome[1]), int(outcome[2])
+            
             sim_wins[winner] += 1; sim_diff[winner] += w - l; sim_diff[loser] += l - w
+            
+            # FIXED: Map scores correctly to positions a and b
             sA, sB = (w, l) if winner == a else (l, w)
-            simulated_matches.append((a, b, winner, w, l))
+            simulated_matches.append((a, b, winner, sA, sB))
         
         all_sim_matches = played_matches_simple + simulated_matches
 
@@ -313,15 +316,15 @@ def run_monte_carlo_simulation(teams, played_matches, current_wins, current_diff
                     finish_counter[team][bracket["name"]] += 1; break
             if team == team_to_track:
                 best_rank, worst_rank = min(best_rank, rank), max(worst_rank, rank)
-        # Re-sort the final output rows so they match the actual standings rank order
-    final_sorted_order = sorted(teams, key=lambda t: (current_wins.get(t, 0), current_diff.get(t, 0)), reverse=True)
-    
+
+    # FIXED: Build the final display order based on the final_ranked_teams list layout
+    # This guarantees the rows perfectly match your standings dataframe order
     rows = [
         {
             "Team": t, 
             **{f"{b['name']} (%)": (finish_counter[t].get(b["name"], 0) / n_sim) * 100 for b in brackets}
         } 
-        for t in final_sorted_order  # <-- Sorted order guarantees matching indexes!
+        for t in final_ranked_teams
     ]
     return {"probs_df": pd.DataFrame(rows).round(2), "best_rank": best_rank, "worst_rank": worst_rank}
 
