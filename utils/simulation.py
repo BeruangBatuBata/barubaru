@@ -215,7 +215,7 @@ def resolve_ties_h2h_gamediff(tied_teams, all_matches_data):
     
     # Sort the group by their H2H game difference.
     # A random element is added as a final, definitive tie-breaker if H2H diff is also identical.
-    return sorted(tied_teams, key=lambda t: (h2h_diff[t], random.random()))
+    return sorted(tied_teams, key=lambda t: (h2h_diff[t], random.random()), reverse=True)
 
 
 def build_standings_table(teams, matches):
