@@ -313,16 +313,16 @@ def run_monte_carlo_simulation(teams, played_matches, current_wins, current_diff
                     finish_counter[team][bracket["name"]] += 1; break
             if team == team_to_track:
                 best_rank, worst_rank = min(best_rank, rank), max(worst_rank, rank)
-    # Re-sort the final output rows so they match the actual standings rank order
-final_sorted_order = sorted(teams, key=lambda t: (current_wins.get(t, 0), current_diff.get(t, 0)), reverse=True)
-
-rows = [
-    {
-        "Team": t, 
-        **{f"{b['name']} (%)": (finish_counter[t].get(b["name"], 0) / n_sim) * 100 for b in brackets}
-    } 
-    for t in final_sorted_order  # <-- Sorted order guarantees matching indexes!
-]
+        # Re-sort the final output rows so they match the actual standings rank order
+    final_sorted_order = sorted(teams, key=lambda t: (current_wins.get(t, 0), current_diff.get(t, 0)), reverse=True)
+    
+    rows = [
+        {
+            "Team": t, 
+            **{f"{b['name']} (%)": (finish_counter[t].get(b["name"], 0) / n_sim) * 100 for b in brackets}
+        } 
+        for t in final_sorted_order  # <-- Sorted order guarantees matching indexes!
+    ]
     return {"probs_df": pd.DataFrame(rows).round(2), "best_rank": best_rank, "worst_rank": worst_rank}
 
 
