@@ -272,7 +272,9 @@ def single_table_dashboard():
                                     for opt_label, opt_code in options:
                                         if opt_label == selected: forced_outcomes[match_key] = opt_code; break
 
-    current_wins, current_diff = defaultdict(int), defaultdict(int)
+    current_wins = defaultdict(int, {t: 0 for t in teams})
+    current_diff = defaultdict(int, {t: 0 for t in teams})
+    
     for m in played:
         teamA, teamB = get_teams_from_match(m)
         if m.get("winner") not in ("1", "2"): continue
